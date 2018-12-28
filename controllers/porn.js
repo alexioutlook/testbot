@@ -40,7 +40,7 @@ class PornController extends Telegram.TelegramBaseController {
             $.sendMessage("Send the age: ");
             $.waitForRequest.then($ => {
               let userMsg = $.message.text;
-              if (!isNaN(userMsg)) {
+              if (isNaN(userMsg)) {
                 $.sendMessage(userMsg + " is not a number");
               } else {
                 searchAge(query);
@@ -89,7 +89,7 @@ class PornController extends Telegram.TelegramBaseController {
             $.sendMessage("Send the videos number");
             $.waitForRequest.then($ => {
               let userMsg = $.message.text;
-              if (!isNaN(userMsg)) {
+              if (isNaN(userMsg)) {
                 $.sendMessage(userMsg + " is not a number");
               } else {
                 searchVids(userMsg);
