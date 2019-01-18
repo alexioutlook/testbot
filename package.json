@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "nspider22": "^1.0.11",
     "telegram-node-bot": "^4.0.5"
   },
   "devDependencies": {},

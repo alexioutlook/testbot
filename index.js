@@ -11,8 +11,14 @@ const tg = new Telegram.Telegram(
 
 const pornController = require("./controllers/porn");
 const otherController = require("./controllers/other");
+const tweetController = require("./controllers/tweet");
+const picController = require("./controllers/pichunter");
 const pornCtrl = new pornController();
+const tweetCtrl = new tweetController();
+const picCtrl = new picController();
 
 tg.router
   .when(new Telegram.TextCommand("/porn", "PornCommand"), pornCtrl)
+  .when(new Telegram.TextCommand("/tweet", "tweetCommand"), tweetCtrl)
+  .when(new Telegram.TextCommand("/pichunter", "picCommand"), picCtrl)
   .otherwise(new otherController());
