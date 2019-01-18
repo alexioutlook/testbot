@@ -48,7 +48,7 @@ class TweetController extends Telegram.TelegramBaseController {
 
   get routes() {
     return {
-      tweetCommand: "tweetController"
+      tweetCommand: "tweetHandler"
     };
   }
 }
